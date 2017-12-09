@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/index.css?rand=<?php echo rand()%1000;?>">
+	<link rel="stylesheet"
+  href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<title>Week2</title>
+	 <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <header class="masthead">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1>Gives and takes are the art of working</h1>
+          <br>
+          <p>Give some feedback and take some comments from your friends <br> who has gone though with you last semester.</p>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+	<form method="post" action="#">
+
+
+	<!-- CITATION: http://talkerscode.com/webtricks/star-rating-system-using-php-and-javascript.php -->
+
+<label for="fname">Student ID: </label>
+    <input type="text" id="fname" name="firstname" placeholder="6 digits number">
+    <input class="btn btn-sm" type="submit" value="Submit" name="submit_rating">
+
+<h3>You prefer to work with...<span id="result"></span></h3>
+
+	<ul id="sortable" class="sortable">
+		<li id="p1" class="default student1">
+		<img class="grabber" src="img/icons8-move_filled.png">
+		<div class="div">
+			<p class="studentname">Bob Newbie</p>
+			<input type="hidden" id="php1_hidden" value="1">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="php1" class="php">
+			<input type="hidden" id="php2_hidden" value="2">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="php2" class="php">
+			<input type="hidden" id="php3_hidden" value="3">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="php3" class="php">
+			<input type="hidden" id="php4_hidden" value="4">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="php4" class="php">
+			<input type="hidden" id="php5_hidden" value="5">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="php5" class="php">
+			<textarea class="textbox" placeholder="Give some comments...."></textarea>
+  		</div>
+
+		</li>
+		<li id="p2" class="default student2">
+		<img class="grabber" src="img/icons8-move_filled.png">
+		<div class="div">
+			<p class="studentname">Birdie Snyder</p>
+			<input type="hidden" id="asp1_hidden" value="1">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="asp1" class="asp">
+			<input type="hidden" id="asp2_hidden" value="2">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="asp2" class="asp">
+			<input type="hidden" id="asp3_hidden" value="3">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="asp3" class="asp">
+			<input type="hidden" id="asp4_hidden" value="4">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="asp4" class="asp">
+			<input type="hidden" id="asp5_hidden" value="5">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="asp5" class="asp">
+			<textarea class="textbox" placeholder="Give some comments...."></textarea>
+		</div>
+		</li>
+		<li id="p3" class="default student3">
+		<img class="grabber" src="img/icons8-move_filled.png">
+			<div class="div">
+			<p class="studentname">Marcus Oliver</p>
+			<input type="hidden" id="jsp1_hidden" value="1">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="jsp1" class="jsp">
+			<input type="hidden" id="jsp2_hidden" value="2">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="jsp2" class="jsp">
+			<input type="hidden" id="jsp3_hidden" value="3">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="jsp3" class="jsp">
+			<input type="hidden" id="jsp4_hidden" value="4">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="jsp4" class="jsp">
+			<input type="hidden" id="jsp5_hidden" value="5">
+			<img src="img/star1.png" onmouseover="change(this.id);" id="jsp5" class="jsp">
+			<textarea class="textbox" placeholder="Give some comments...."></textarea>
+  </div></li>
+	</ul>
+
+
+<input type="hidden" name="phprating" id="phprating" value="0">
+  <input type="hidden" name="asprating" id="asprating" value="0">
+  <input type="hidden" name="jsprating" id="jsprating" value="0">
+  <input type="submit" value="Submit" name="submit_rating">
+
+</form> 
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+#flat-slider { margin-top: 100px; width: 170px;}
+#dressslide{
+
+
+
+}
+
+.level1{
+  position:relative;
+  z-index: 5;
+}
+
+.level2{
+  position:absolute;
+  z-index: 15;
+
+}
+
+
+.level3{
+  position:absolute;
+  z-index: 20;
+  top: 180px;
+  left: 125px;
+}
+
+#dress1{
+
+}
+
+.mini {
+  width: 230px;
+  height: 120px;
+ }
+
+.midi {
+    
+}
+
+.maxi {
+
+}
+
+
+/*Animations*/
+
+.midiright {
+  width: 150px;
+    height: 165px;
+    -webkit-animation-name: midiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: midiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes midiright {
+    0% {width: 150px;
+    height: 101px;}
+    100% {width: 150px;
+    height: 165px;}
+}
+
+/* Standard syntax */
+@keyframes midiright {
+  0% {width: 150px;
+    height: 101px;}
+    100% {width: 150px;
+    height: 165px;}
+}
+
+.maxiright {
+  width: 150px;
+    height: 257px;
+    -webkit-animation-name: maxiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxiright {
+     0% {width: 150px;
+    height: 165px;}
+    100% {width: 150px;
+    height: 257px;}
+}
+
+/* Standard syntax */
+@keyframes maxiright {
+   0% {width: 150px;
+    height: 165px;}
+    100% {width: 150px;
+    height: 257px;}
+}
+
+.maxidragright {
+  width: 150px;
+    height: 257px;
+    -webkit-animation-name: maxidragright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxidragright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxidragright {
+     0% {width: 150px;
+    height: 101px;}
+    100% {width: 150px;
+    height: 257px;}
+}
+
+/* Standard syntax */
+@keyframes maxidragright {
+  0% {width: 150px;
+    height: 101px;}
+    100% {width: 150px;
+    height: 257px;}
+}
+
+.minidragleft {
+  width: 150px;
+    height: 101px;
+    -webkit-animation-name: minidragleft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minidragleft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minidragleft {
+    0% {width: 150px;
+    height: 257px;}
+    100% {width: 150px;
+    height: 101px;}
+}
+
+/* Standard syntax */
+@keyframes minidragleft {
+  0% {width: 150px;
+    height: 257px;}
+    100% {width: 150px;
+    height: 101px;}
+}
+
+.maxileft {
+  width: 150px;
+    height: 165px;
+    -webkit-animation-name: maxileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxileft {
+    0% {width: 150px;
+    height: 257px;}
+    100% {width: 150px;
+    height: 165px;}
+}
+
+/* Standard syntax */
+@keyframes maxileft {
+ 0% {width: 150px;
+    height: 257px;}
+    100% {width: 150px;
+    height: 165px;}
+}
+
+.minileft {
+  width: 150px;
+    height: 101px;
+    -webkit-animation-name: minileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minileft {
+    0% {width: 150px;
+    height: 165px;}
+    100% {width: 150px;
+    height: 101px;}
+}
+
+/* Standard syntax */
+@keyframes minileft {
+ 0% {width: 150px;
+    height: 165px;}
+    100% {width: 150px;
+    height: 101px;}
+}
+
+/*Assistance from http://lugolabs.com/flat-slider to style slider*/
+
+.flat-slider.ui-corner-all,
+.flat-slider .ui-corner-all {
+  border-radius: 0;
+}
+
+.flat-slider.ui-slider {
+  border: 0;
+  background: #282120;
+  border-radius: 7px;
+}
+
+.flat-slider.ui-slider-horizontal {
+  height: 12px;
+}
+
+.flat-slider.ui-slider-vertical {
+  height: 15em;
+  width: 12px;
+}
+
+.flat-slider .ui-slider-handle {
+  width: 25px;
+  height: 27px;
+  background: #d13bce;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-handle {
+  top: 50%;
+  margin-top: -13.5px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-handle {
+  left: 50%;
+  margin-left: -12.5px;
+}
+
+.flat-slider .ui-slider-handle:hover {
+  opacity: .8;
+}
+
+.flat-slider .ui-slider-range {
+  border: 0;
+  border-radius: 7;
+  background: #f99;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 12px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 12px;

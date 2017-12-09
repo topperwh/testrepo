@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+            
+        <link rel="stylesheet" 
+        href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://use.fontawesome.com/2565182047.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+        <script>
+            $(document).on("pagecreate", "#bar", function(){
+              $(window).on("orientationchange", function() {
+                
+                if(window.orientation == 0) {
+                    alert("portrait");
+                } 
+                else {
+                    alert("landscape");
+                }
+
+            });
+
+            });
+
+
+
+            // swipe
+            $(document).on("pagecreate", "#bar", function(){
+                $("p").on("swipeleft", function() {
+                    alert("Swiped Left");
+                });
+            });
+
+            $(document).on("pagecreate", "#bar", function(){
+                $("p").on("swiperight", function() {
+                    alert("Swiped Right");
+                });
+            });
+
+            $(document).on("pagecreate", "#bar", function(){
+                $("p").on("taphold", function() {
+                    alert("Tap Hold!");
+                });
+            });
+        </script>
+    </head>
+    <body>
+       <!--  Page 1 -->
+        <div data-role="page" id="foo">
+            <div data-role="header">
+                <a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+                <h1> jQuery Mobile Header</h1>
+                <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add</a>
+
+            </div>
+            <div data-role="main" class="ui-content">
+                    
+                    <div data-role="main" class="ui-content">
+                        
+                    </div>
+
+                    <ul data-role="listview" data-autodividers="true" data-inset="true" data-filter="true">
+                        <li><a href="#"><img src="http://uk.gsk.com/media/1003/icon-twitter.png?height=40&width=40&mode=crop" class="ui-li-icon">Lorem</a></li>
+                        <li><i class="fa fa-microchip ui-li-count" aria-hidden="true" ></i>California</a></li>
+                        <li><a href="#">Tennesse</a></li>
+                        <li><a href="#">New York</a></li>
+                        <li><a href="#">Seatle</a></li>
+                        <li><a href="#">Irvine</a></li>
+                        <li><a href="#">Orange County</a></li>
+                    </ul>
+                    <br>
+                    <a href="#bar" data-transition="pop"> Go to page 2</a>
+                    <p> main area for app </p>
+                    <button class="ui-btn ui-shadow ui-icon-search ui-btn-icon-bottom">Search</button>
+            </div>
+            <div data-role="footer">
+                <h1> jQuery Mobile Footer</h1>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div data-role="page" id="bar">
+            <div data-role=panel id="myPanel" data-display="overlay" data-position="left">
+                <h2>Fabulous App</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div data-role="header">
+                <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="home" class="ui-btn active">Home</a></li>
+                    <li><a href="#foo" data-icon="arrow-r">Next</a></li>
+                    <li><a href="#" data-icon="gear">Setting</a></li>
+                </ul>
+                </div>
+                <h1>Page 2</h1>
+
+            </div>
+            <hr>
+            <p style="font-weight: bold; color:red;"> Lorem Ipsum Blah Blah </p>
+            <hr>
+            <div data-role="main" class="ui-content">
+
+                 <p> Swipe Me Left</p>
+                <p style="border:1px solid black; height: 200px; width=200px;">
+                </p><p><span style="color:red"></span></p>
+
+                <a href="#foo" data-transition="flip">Go to page1</a>
+               <p>Tap me</p>
+                <a href="#myPanel" class="ui-btn ut-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+                <div data-role="contentgroup" data-type="horizontal">
+                    <p>Horizontal Grouping</p>
+                    <a href="#" class="ui-btn">Button 1</a>
+                    <a href="#" class="ui-btn">Button 2</a>
+                    <a href="#" class="ui-btn">Button 3</a>
+                </div>
+        
+                <a href="#mypopup" data-rel="popup" data-transition="pop" class="ui-btn">Show Info</a>
+                <div data-role="popup" id="mypopup" class="ui-content">
+                    <p>This is my <b>popup</b></p>
+                </div>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>Page 2 Footer</h1>
+            </div>
+        </div>
+    </body>
+</html>

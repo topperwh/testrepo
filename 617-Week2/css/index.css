@@ -1,0 +1,60 @@
+.navbar {
+	height:50px; background-color:#00B3E9;
+}
+
+.nav-item {
+	color: white;
+}
+
+.subnav {
+	list-style-type: none;
+}
+
+.navright {
+	padding-top: 8px;
+	}
+
+
+.btn {
+	background: black;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#00B3E9;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+li.rightnav {
+	float: right;
+	margin-top: 0.5em;
+}
+
+p.caption {
+	color:#00B3E9; 
+	letter-spacing: 0.15em;
+}
+
+p.bullets {
+	color: #00B3E9;
+	font-weight: bold
+}

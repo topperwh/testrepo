@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://topperwh.webhostingforstudents.com/617-store/custom.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="custom_files/index.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="custom_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom_files/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="custom_files/animate.min.css"> -->
+    <link rel="stylesheet" href="custom_files/slider.css">
+    <script src="custom_files/jquery.min.js"></script>
+<script src="custom_files/bootstrap.bundle.min.js"></script>
+  <script src="custom_files/jquery-ui.js"></script>
+  <script src="custom_files/jquery.ui.touch-punch.min.js"></script> 
+
+<!-- Added CSS below to style the selection divs(neckline, fabric, and skirt length) -->
+
+<style type="text/css">
+  #main,#main2 {
+    width: 960px;
+    height: 300px;
+    border: 1px solid black;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+
+}
+
+#main div, #main2 div {
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+    text-align: center;
+}
+
+.dress1, .dress2, .dress3, .dress4, #neck1, #neck2, #neck3, #neck4{
+  cursor: pointer;
+  width: 150px;
+  height: 200px;
+  margin-top: 25px;
+  padding: 10px;
+
+}
+
+#main, #secondh2, #clear-btn2, #sliderSelect, #dressslide{
+  display: none;
+}
+
+#draggable1, #draggable2, #draggable3, #draggable4{
+  z-index: 7;
+
+}
+#skirtdrop{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  z-index: 7;
+  top: 0;
+  left: 168px;
+}
+
+
+
+</style>
+
+<!-- End of Added CSS -->
+
+
+
+  </head>
+
+<body>
+<!-- Deleted links for navigation for developing purposes -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">NAT COLLECTION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Concept</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fall Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+</nav>	<div class="divider"></div>
+
+<!-- Here is what I added below:(not telling you to add this stuff because I already did)
+
+ id(droppable) to div with displayleft class 
+
+ Add style position:relative to div with displayleft class
+
+ add div with id(neckdrop) for dropping neckline photo... add this to div with displayleft class 
+
+ selection divs to div with class custombar(neckline, fabric, skirt)
+
+ Add slider div with 
+
+-->
+
+	<div class="row">
+	<div class="left col-sm-12 col-md-7">
+    <!-- ADD -->
+		<div id="droppable" class="displayleft" style="position: relative;">
+
+      <div id="neckdrop" style="position: absolute; top: 82px; left: 190px; width: 40px; height: 40px; z-index: 5;"></div>
+      <div id="dressdrop" style="position: absolute; top: 195px; left: 205px; width: 40px; height: 40px; z-index: 5;"></div>
+      <div id="skirtdrop" style="position: absolute; top: 445px; left: 180px; width: 40px; height: 40px; z-index: 5;">
+        <img id="dressslide" class="mini"  src="custom_files/mini.png"> 
+      </div>
+
+
+
+       <!-- End of Add -->
+		<img class="img-responsive display" src="custom_files/display.png" alt="">
+		</div>
+	</div>
+  
+	<div class="left col-sm-12 col-md-5">
+   
+			<div class="headline">
+				<h1>Customize your dress</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maiores sequi illum blanditiis aperiam eius reprehenderit praesentium quidem. Quis, ut.</p>
+			</div>
+			
+			<div class="custombar">
+
+        <!-- Add -->
+        <h2 id="firsth2">Click Neckline</h2>
+  <button id="clear-btn" class="clearneck-btn">Clear Neckline Selection</button>
+        <div id="main2">
+    
+  <div id="click1"><img id="neck1" src="custom_files/neck1.jpg"></div>
+  <div id="click2"><img id="neck2" src="custom_files/neck2.jpg"></div>  
+  <div id="click3"><img id="neck3" src="custom_files/neck3.jpg"></div>  
+  <div id="click4"><img id="neck4" src="custom_files/neck4.jpg"></div>  
+</div>
+
+<h2 id="secondh2">Drag Fabric</h2>
+<button id="clear-btn2" class="clear-btn">Clear Dress Selection</button>
+<div id="main">
+  
+  <div id="draggable1"><img class="dress1" src="custom_files/dress1.jpg"></div>
+  <div id="draggable2"><img class="dress2" src="custom_files/dress2.jpg"></div>  
+  <div id="draggable3"><img class="dress3" src="custom_files/dress3.jpg"></div>  
+  <div id="draggable4"><img class="dress4" src="custom_files/dress4.jpg"></div>  
+</div>
+
+<div id="sliderSelect" style="display: none;">
+
+<h2 id="secondh3">Slide for Dress Length</h2>
+
+<div id="flat-slider" class="flat-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+  <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+</div>
+
+</div>
+
+
+<!-- End of Add -->
+
+
+<!-- Commented Out img of selection to add selection divs -->
+				<!-- <img class="img-responsive" src="./custom_files/custombar.png" style="width: 100%; display: block;
+		    margin: auto; "> -->
+
+        <!-- Took out link info -->
+		    <div class="text-center">
+				<div class="divider"></div>
+		    	<a href="#"><button type="button" class="btn"> Add to cart</button></a>
+		    </div>
+
+
+	</div>
+	</div>
+	
+		<div class="divider"></div>
+	</div>
+	    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright © Nat Collection 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+<!--Other js files added -->
+ 
+<script src="custom_files/neck.js"></script>  
+<script src="custom_files/drag.js"></script>  
+<script src="custom_files/slider.js"></script>	
+
+<!-- End of changes -->
+
+</body></html>

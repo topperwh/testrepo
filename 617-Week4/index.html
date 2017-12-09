@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/index.css?rand=<?php echo rand()%1000;?>">
+	<link rel="stylesheet"
+  href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+	<title>Week2</title>
+</head>
+<body>
+	<h1>Jquery UI Interaction</h1>
+
+	<div class="row">
+
+		<div id="draggable" class="ui-widget-content">
+			<p>
+				Drag 1
+			</p>
+		</div>
+		
+		<div id="draggable2" class="ui-widget-content">
+			<p>
+				Drag 2
+			</p>
+		</div>
+		
+		<div id="draggable0" class="ui-widget-content">
+			<p>
+				Drag 0
+			</p>
+		</div>
+
+		<div id="resizeable1" class="ui-widget-content">
+			<p>
+				Resize me~
+			</p>
+		</div>
+		
+
+	</div>
+	<br><br>
+	<div class="row">
+
+		<div id="droppable3" class="ui-widget-content">
+			<p>
+				Basket 1: normal
+			</p>
+		</div>
+
+
+		<div id="droppable4" class="ui-widget-content">
+			<p>
+				Basket 2: fit
+			</p>
+		</div>
+
+		<div id="droppable5" class="ui-widget-content">
+			<p>
+				Basket 3: touch and accept only Drag 0
+			</p>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>

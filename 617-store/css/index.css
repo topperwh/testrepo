@@ -1,0 +1,366 @@
+body
+{
+	background-color:#0B4C5F;
+	font-family:helvetica;
+	text-align:center;
+}
+
+
+.form-control2 {
+	display: inline-block;
+    width: 40%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#head {
+      text-align: center;
+}
+
+.padding {
+	padding: 0.5em;
+}
+
+.placeholder {
+
+}
+
+.roundpad {
+	padding: 1em;
+}
+
+.conceptcontent {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.subhead {
+	width: 60vw;
+}
+
+.herosection {
+	height: 100vh;
+}
+
+.bilg {
+	background-color: lightgrey;
+	padding:1em;
+}
+
+
+.chr1 {
+
+}
+
+input[type="submit"]
+{
+	border:none;
+	background:none;
+	background-color:#585858;
+	width:100px;
+	height:50px;
+	color:white;
+	border-radius:3px;
+	font-size:17px;
+	margin-top:20px;
+}
+
+.neckdrop {
+	position: absolute;
+    top: 130px;
+    left: 95px;
+}
+
+.neckdisplay {
+	width: 160px;
+}
+
+.dresslenght {
+	position: absolute;
+   	top: 260px;
+    left: 80px;
+}
+
+.thumboutside {
+	display: inline-block;
+	padding: 0.3em;
+}
+
+.thumboutside2 {
+	display: inline-block;
+}
+
+.thumb {
+	width: 130px;
+}
+
+
+p.navpanel {
+	display: inline;
+	text-align: center;
+	color: white;
+	padding: 0.2em;
+}
+
+.toppanel {
+	background-color: #E277A5;
+	width: 100%;
+	text-align: center;
+}
+
+.stripe {
+	background-color:#E10219;
+	height: 2px;
+	width: 100%;
+}
+
+.row {
+	margin-right: 0px !important;
+}
+
+.logo {
+	max-width: 30px;
+}
+
+.btn.btn-square {
+  border-radius: 0;
+  background-color: #192682;
+  color: white;
+}
+
+.holdercustom {
+	height: 490px;
+}
+
+.cl1 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/manican.png') no-repeat;
+    background-size: 100%;
+    background-color: white;
+
+}
+
+.l1 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/le_l1bg.png') no-repeat;
+    background-size: 100%;
+    background-color: #FFA989;
+}
+
+.r1 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/le_r1bg.jpg') no-repeat;
+    background-size: 100%;
+    background-color: #3C3837;
+}
+
+.l2 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/le_l2bg.png') no-repeat;
+    background-size: 100%;
+    background-color: #E277A5;
+}
+
+.l31 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/le_l3bg.png') no-repeat;
+    background-size: 100%;
+    background-color: #FAEE64;
+}
+
+.l32 {
+    background-color: #FAEE64;
+}
+
+.r3 {
+	background: url('http://topperwh.webhostingforstudents.com/617-store/img/le_r3bg.png') no-repeat;
+    background-size: 100%;
+    background-color: #FFA989;
+}
+
+.logo2 {
+	padding-left: 15px;
+	max-height: 30px;
+}
+
+.logofoot {
+	height: 35px;
+}
+
+
+
+.headline {
+	margin-top: 5em;
+	margin-bottom: 3em;
+	padding: 1em;
+}
+
+.display {
+	height: 90vh;
+	width: 80%; 
+	display: block;
+	margin: auto; 
+}
+
+h1,h2  {
+	font-family: 'EB Garamond', serif !important;
+}
+
+
+h3 {
+	font-family: 'Nunito', sans-serif !important;
+	font-size: 14px !important;
+	line-height: 150% !important;
+}
+
+
+p {
+	font-family: 'Nunito', sans-serif !important;
+	font-size: 22px !important;
+}
+
+.textinbox {
+	padding-top: 2.5em;
+	padding-left: 8em;
+}
+
+.textinbox2 {
+	padding-top: 2.5em;
+	padding-left: 2em;
+}
+
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.divider {
+	margin-bottom: 4.5em;
+	width: 100%;
+}
+
+.divider2 {
+	margin-top: 10em;
+	width: 100%;
+}
+
+
+.banner {
+	padding: 15px;
+}
+
+.limit{
+        width: 100vw;
+        
+        overflow: hidden;
+     }
+.limit img{
+   width: 100%;
+   height: 100%;
+ }
+
+.footer {
+	background-color: #192682;
+}
+
+.colleft {
+	background-color:#7F7F7F;
+}
+
+.colright {
+	background-color: green;
+}
+
+
+.default {
+    color: #333333;
+    display: inline-block;
+    width: 270px;
+    /* Input Background: */
+	background: rgba(0,0,0,0.20);
+	background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 32%, rgba(0,0,0,0.76) 81%);
+	border: 0 solid #DADADA;
+	margin: 0.9em;
+	box-shadow: 0 42px 44px 0 rgba(0,0,0,0.34);
+	border-radius: 3px;
+	min-height: 378px;
+ }
+
+
+input[type="submit"]
+{
+	border:none;
+	background:none;
+	background-color:#585858;
+	width:100px;
+	height:50px;
+	color:white;
+	border-radius:3px;
+	font-size:17px;
+	margin-top:20px;
+}
+
+@media (max-width:768px) {
+
+.placeholder {
+	height: 250px;
+}
+
+.subhead {
+	width: 100vw;
+}
+
+.chr1 {
+	padding-top: 2em;
+}
+
+}
+
+
+
+
+@media (max-width:600px) {
+
+
+
+
+.headline {
+	display: none;
+}
+
+.displayleft {
+}
+}
+	
+@media (max-width:600px) {
+
+
+.display {
+	width: 100%; 
+}
+}
+
+@media (max-width:486px) {
+
+.textinbox2 {
+	padding-top: 0.25em;
+	padding-left: 1em;
+}
+
+.textinbox {
+	padding-top: 0.25em;
+	padding-left: 1em;
+}
+
+}

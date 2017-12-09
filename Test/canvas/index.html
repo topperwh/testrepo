@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://chengzhejin.com/AAU/wnm617/m11/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="Cache-Control" content="no-store" />
+
+		<link rel="stylesheet" href="index_files/prism.css">
+		<link rel="stylesheet" href="index_files/website.css">
+		<link rel="stylesheet" href="index_files/canvasSave.css">
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="index_files/drawingboard.min.css">
+		<script src="index_files/jquery-1.10.1.min.js"></script>
+
+		<script src="index_files/drawingboard.min.js"></script>
+
+
+
+		<style>
+		body{
+			overflow: auto;
+		}
+
+		.board {
+			margin: 0 auto;
+			width: 300px;
+			height: 300px;
+			background-color: grey;
+			padding: 5px;
+
+		}
+
+		#custom-board {
+			
+		}
+
+		.example{}
+
+
+		</style>
+	</head>
+	<body style="">
+
+		<label for="imageUpload" id="pattern1" class="btn btn-primary btn-outlined" style="float: left;">Choose Pattern :)</label>
+<!-- <input type="file" id="imageUpload" accept="image/*" style="display: none"> -->
+	<input class="classhere" type="file" name="logo"  id="imageUpload" style="display: none">
+<div class="imagearea">
+	<img src="">
+</div>
+<button class="erase btn btn-warning">Remove Selected Pattern</button>
+
+
+		<div id="container">
+			
+<h2>or Draw a Pattern then Save it</h2>
+			<div class="example" data-example="1">
+	
+				<div class="board" id="custom-board"></div>
+			</div>
+
+			<button class="btn btn-success btn-large" onclick="takeScreenshot();">Save Drawing</button>
+
+	
+		</div>
+
+
+
+		
+
+		<script data-example="1">
+			var customBoard2 = new DrawingBoard.Board('custom-board', {
+				controls: [
+					'Color',
+					{ Size: { type: 'dropdown' } },
+					{ DrawingMode: { filler: false } },
+					'Navigation',
+					'Download'
+				],
+				size: 1,
+				webStorage: 'session',
+				enlargeYourContainer: true
+			});
+		</script>
+
+		<script src="index_files/html2canvas.min.js"></script>
+		<script type="text/javascript">
+			function takeScreenshot(){
+				var element = $(".drawing-board-canvas");
+  				
+				html2canvas(element, {
+					background: '#FFFFFF',
+					onrendered:function(canvas){
+						var imgData = canvas.toDataURL('image/jpeg');
+						$.ajax({
+							url:'index_files/save.php',
+							type:'post',
+							dataType:'text',
+							data:{
+								base64data:imgData
+							}
+
+							
+
+
+						});
+					}
+
+					
+
+				});
+
+							localStorage.setItem("pattern", 'index_files/1.jpg');
+							var img = new Image();
+							 img.src = localStorage.pattern;
+							$(".imagearea").html(img);
+							$("img").css({"width": "110px", "height": "110px"});
+			
+
+			}
+		</script>
+
+	<script src="index_files/imagewrite.js"></script>
+
+
+
+	
+
+</body></html>

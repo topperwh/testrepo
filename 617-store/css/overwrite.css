@@ -1,0 +1,543 @@
+.board {
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background-color: grey;
+            padding: 5px;
+
+        }
+
+        .mini{
+width: 350px;
+    height: 165px;
+}
+.midi{
+width: 350px;
+    height: 240px;
+
+}
+
+/*Animations*/
+
+
+
+.maxi{
+	
+     width: 350px;
+    height: 360px;
+}
+
+.midiright {
+  width: 350px;
+    height: 240px;
+    -webkit-animation-name: midiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: midiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes midiright {
+    0% {width: 350px;
+    height: 165px;}
+    100% {width: 350px;
+    height: 240px;}
+}
+
+/* Standard syntax */
+@keyframes midiright {
+  0% {width: 350px;
+    height: 165px;}
+    100% {width: 350px;
+    height: 240px;}
+}
+
+.flat-slider .ui-slider-handle {
+    width: 25px;
+    height: 27px;
+    background: #E277A5;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.flat-slider .ui-slider-handle:hover {
+    opacity: 1;
+}
+
+.maxiright {
+  width: 350px;
+    height: 360px;
+    -webkit-animation-name: maxiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxiright {
+     0% {width: 350px;
+    height: 240px;}
+    100% {width: 350px;
+    height: 360px;}
+}
+
+/* Standard syntax */
+@keyframes maxiright {
+   0% {width: 350px;
+    height: 240px;}
+    100% {width: 350px;
+    height: 360px;}
+}
+
+.maxidragright {
+  width: 350px;
+    height: 360px;
+    -webkit-animation-name: maxidragright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxidragright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxidragright {
+     0% {width: 350px;
+    height: 165px;}
+    100% {width: 350px;
+    height: 360px;}
+}
+
+/* Standard syntax */
+@keyframes maxidragright {
+  0% {width: 350px;
+    height: 165px;}
+    100% {width: 350px;
+    height: 360px;}
+}
+
+.minidragleft {
+  width: 350px;
+    height: 165px;
+    -webkit-animation-name: minidragleft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minidragleft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minidragleft {
+    0% {width: 350px;
+    height: 360px;}
+    100% {width: 350px;
+    height: 165px;}
+}
+
+/* Standard syntax */
+@keyframes minidragleft {
+  0% {width: 350px;
+    height: 360px;}
+    100% {width: 350px;
+    height: 165px;}
+}
+
+.maxileft {
+  width: 350px;
+    height: 240px;
+    -webkit-animation-name: maxileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxileft {
+    0% {width: 350px;
+    height: 360px;}
+    100% {width: 350px;
+    height: 240px;}
+}
+
+/* Standard syntax */
+@keyframes maxileft {
+ 0% {width: 350px;
+    height: 360px;}
+    100% {width: 350px;
+    height: 240px;}
+}
+
+.minileft {
+  width: 350px;
+    height: 165px;
+    -webkit-animation-name: minileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minileft {
+    0% {width: 350px;
+    height: 240px;}
+    100% {width: 350px;
+    height: 165px;}
+}
+
+/* Standard syntax */
+@keyframes minileft {
+ 0% {width: 350px;
+    height: 240px;}
+    100% {width: 350px;
+    height: 165px;}
+}
+
+
+.panel1, .panel2, .panel3, .panel4{
+	display: none;
+}
+
+#dressslide{
+	display: none;
+}
+.mini {
+    width: 350px;
+    height: 165px;
+}
+
+.fabric {
+    border-radius: 45%;
+    width: 100px;
+    height: 100px;
+}
+
+.dresslenght{
+    position: absolute;
+    top: 300px;
+    left: 70px;
+}
+
+.holdercustom {
+    height: 680px;
+    width: 450px;
+    /* margin: 0 auto; */
+}
+.textinbox{
+	padding-left: 4em;
+}
+.thumbnails{
+	text-align:center;
+}
+#flat-slider{
+	margin-left: 40%;
+}
+.thumb, #dress1, #dress2, #dress3{width: 106px;}
+
+.col-md-5{
+	 -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+img.neckdisplay{
+	width: 185px;
+	height:185px;
+}
+
+img#dresslide{
+	width: 350px;
+	height:185px;
+}
+		.neckdrop{
+			top: 158px;
+			left: 126px;
+		}
+#dressdrop{
+	position: absolute;
+	top: 300px;
+	z-index: 5;
+	right: 20px;
+}
+		.dress1, .dress2, .dress3, .dress4, #neck1, #neck2, #neck3, #neck4, #dressdrop, #neckdrop, .dresslenght{
+  cursor: pointer;
+
+}
+
+
+.col-md-2, .col-sm-12{
+    position: relative;
+    width: 450px;
+    /* height: 0; */
+    /* height: 500px; */
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
+}
+
+@media (min-width: 576px){
+.col-sm-12{
+ -ms-flex: 0 0 450px;
+    flex: 0 0 450px;
+    max-width: 450px;
+}
+
+.col-md-5.col-sm-12{
+-ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+}/*End of Media 576px*/
+
+
+@media (min-width: 768px){
+
+.col-md-2 {
+    -ms-flex: 0 0 6.666667%;
+    flex: 0 0 6.666667%;
+    max-width: 6.666667%;
+}
+
+.col-md-3 {
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
+    max-width: 300px;
+}
+/*.col-md-5{
+	-ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}*/
+.col-md-5.col-sm-12{
+-ms-flex: 0 0 54%;
+    flex: 0 0 54%;
+    max-width: 54%;
+}
+
+.fabric{
+			border-radius: 45%;
+			width: 55px;
+			height: 55px;
+		}
+
+
+.textinbox{
+	padding-left: 20px;
+}
+
+#dressdrop{
+	position: absolute;
+	top: 225px;
+	right: 0;
+	z-index: 5;
+}
+
+img.neckdisplay{
+	width: 115px;
+	height: 130px;
+}
+#neckdrop{
+	top: 103px;
+	left: 88px;
+}
+
+.dresslenght{
+	top: 205px;
+	left: 50px;
+}
+.mini{
+ width: 230px;
+    height: 115px;
+}
+.midi{
+width: 230px;
+    height: 145px;
+
+}
+
+.maxi{
+	
+     width: 230px;
+    height: 250px;
+}
+
+
+/*Animations*/
+
+.midiright {
+  width: 230px;
+    height: 145px;
+    -webkit-animation-name: midiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: midiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes midiright {
+    0% {width: 230px;
+    height: 115px;}
+    100% {width: 230px;
+    height: 145px;}
+}
+
+/* Standard syntax */
+@keyframes midiright {
+  0% {width: 230px;
+    height: 115px;}
+    100% {width: 230px;
+    height: 145px;}
+}
+
+.maxiright {
+  width: 230px;
+    height: 250px;
+    -webkit-animation-name: maxiright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxiright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxiright {
+     0% {width: 230px;
+    height: 145px;}
+    100% {width: 230px;
+    height: 250px;}
+}
+
+/* Standard syntax */
+@keyframes maxiright {
+   0% {width: 230px;
+    height: 145px;}
+    100% {width: 230px;
+    height: 250px;}
+}
+
+.maxidragright {
+  width: 230px;
+    height: 250px;
+    -webkit-animation-name: maxidragright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxidragright;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxidragright {
+     0% {width: 230px;
+    height: 115px;}
+    100% {width: 230px;
+    height: 250px;}
+}
+
+/* Standard syntax */
+@keyframes maxidragright {
+  0% {width: 230px;
+    height: 115px;}
+    100% {width: 230px;
+    height: 250px;}
+}
+
+.minidragleft {
+  width: 230px;
+    height: 115px;
+    -webkit-animation-name: minidragleft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minidragleft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minidragleft {
+    0% {width: 230px;
+    height: 250px;}
+    100% {width: 230px;
+    height: 115px;}
+}
+
+/* Standard syntax */
+@keyframes minidragleft {
+  0% {width: 230px;
+    height: 250px;}
+    100% {width: 230px;
+    height: 115px;}
+}
+
+.maxileft {
+  width: 230px;
+    height: 145px;
+    -webkit-animation-name: maxileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: maxileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes maxileft {
+    0% {width: 230px;
+    height: 250px;}
+    100% {width: 230px;
+    height: 145px;}
+}
+
+/* Standard syntax */
+@keyframes maxileft {
+ 0% {width: 230px;
+    height: 250px;}
+    100% {width: 230px;
+    height: 145px;}
+}
+
+.minileft {
+  width: 230px;
+    height: 115px;
+    -webkit-animation-name: minileft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: minileft;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes minileft {
+    0% {width: 230px;
+    height: 145px;}
+    100% {width: 230px;
+    height: 115px;}
+}
+
+/* Standard syntax */
+@keyframes minileft {
+ 0% {width: 230px;
+    height: 145px;}
+    100% {width: 230px;
+    height: 115px;}
+}
+
+.mini {
+    width: 230px;
+    height: 115px;
+}
+
+}/* End of Media 768px*/

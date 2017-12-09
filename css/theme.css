@@ -1,0 +1,117 @@
+
+.bluenav {
+	background-image: -webkit-linear-gradient(#1FB3EB 0%, #06A1D6 100%);
+	background-image: -o-linear-gradient(#1FB3EB 0%, #06A1D6 100%);
+	background-image: linear-gradient(#1FB3EB 0%, #06A1D6 100%);
+	min-height: 54px;
+	padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
+.menutext {
+	font-family: Arial-BoldMT;
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 0.2px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.buttonblack {
+	background: #050600;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	margin: 0.8em 0em 0.1em 0.5em;
+}
+
+.firstpart {
+	margin-top: 3em;
+}
+
+.profilepic {
+	width: 130px;
+	height: 130px;
+	display: inline-block;
+}
+
+.details {
+	font-family: ArialMT;
+	font-size: 14px;
+	color: #4A4A4A;
+	letter-spacing: 0;
+	display: inline;
+}
+
+.right {
+	text-align: right;
+}
+
+h1 {
+	font-family: AlternateGotNo1D;
+    font-size: 48px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-top: 0.7em;
+    margin-bottom: -0.2em;
+}
+
+h2 {
+	font-family: Arial-BoldMT;
+    font-size: 14px;
+    color: #15ACE3;
+    letter-spacing: 3.2px;
+    margin: 0px;
+}
+
+h3 {
+	font-family: Arial-BoldMT;
+    font-size: 14px;
+    color: #15ACE3;
+    margin-top: 0.7em;
+    margin-bottom: 0.1em;
+    display: inline-block;
+ }
+
+
+
+
+@media (max-width:900px) {
+
+
+
+}
+
+
+
+
+@media (max-width:600px) {
+
+p {
+	font-size: 1em;
+}
+
+.heroimg {
+	display: none;
+}
+
+.calculator {
+	margin-top: 1.2em;
+}
+
+.herobuttom {
+	display: inline;
+}
+
+
+
+
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  
+  
+}
+

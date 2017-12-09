@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>
+            #map {
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="start" readonly value="Paris">
+        <input id="end">
+        <input type="button" class="btn btn-info" id="myloc" onClick="getLoc()">
+        <input type="button" value="Go" class="btn btn-warning" onClick="calcRoute()">
+        <input type="button" value="Drop Pin" class="btn btn-danger" onClick="dropPin()">
+        <div id="map">
+
+        </div>
+        <div id="direction-text">
+
+        </div>
+        <script>
+            var map;
+            var myMarker;
+            var directionsDisplay;
+            var directionsService;
+            var infoWindow;
+            var styles = [
+                {
+                    "featureType": "administrative",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "stylers": [
+                        {
+                            "color": "#84afa3"
+                        },
+                        {
+                            "lightness": 52
+                        }
+                    ]
+                },
+                {
+                    "stylers": [
+                        {
+                            "saturation": -17
+                        },
+                        {
+                            "gamma": 0.36
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#3f518c"
+                        }
+                    ]
+                }
+            ]
+            var pinImage = "https://openclipart.org/image/90px/svg_to_png/234349/flat_location_logo.png"
+            function initMap() {
+                var paris = new google.maps.LatLng(48.864716,2.349014);
+                directionsService = new google.maps.DirectionsService;
+                directionsDisplay = new google.maps.DirectionsRenderer;
+                
+                var mapOption = {
+                    zoom: 7,
+                   // styles: styles,
+                    center: paris
+                }
+                map = new google.maps.Map(document.getElementById("map"),mapOption);
+                directionsDisplay.setMap(map);
+                directionsDisplay.setPanel(document.getElementById("direction-text"));
+            }
+            function getLoc() {
+                infoWindow = new google.maps.InfoWindow;
+
+                // Try HTML5 geolocation.
+                if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                    };
+
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Location found.');
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+                } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+                }
+            }
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                infoWindow.setPosition(pos);
+                infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+                infoWindow.open(map);
+            }
+            function calcRoute() {
+                var start = document.getElementById("start").value;
+                var end = document.getElementById("end").value;
+                var request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.TravelMode.DRIVING
+                }
+                directionsService.route(request, function(result, status) {
+                    if(status === google.maps.DirectionsStatus.OK){
+                        directionsDisplay.setDirections(result);
+                    };
+                });
+            }
+            function dropPin() {
+                if(myMarker) {
+                    myMarker.setMap(null);
+                }
+                myMarker = new google.maps.Marker({
+                    position: map.getCenter(),
+                    map: map,
+                    icon: pinImage,
+                    animation: google.maps.Animation.DROP,
+                    draggable: true,
+                });
+                myMarker.addListener('click', toggleBounce);
+                google.maps.event.addListener(myMarker, 'dragend', function() {
+                    copyMarkerPosition();
+                }); 
+            }
+            function copyMarkerPosition(){
+                document.getElementById("end").value = myMarker.getPosition().lat() + ',' + myMarker.getPosition().lng();
+            }
+            function toggleBounce() {
+                if(myMarker.getAnimation() != null) {
+                    myMarker.setAnimation(null);
+                }
+                else {
+                    myMarker.setAnimation(google.maps.Animation.BOUNCE)
+                }
+            }
+
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFjAXdrDPTIKMggwiUAUK90UwGnITEXhY&callback=initMap"
+        type="text/javascript"></script>
+    </body>
+</html>
